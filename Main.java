@@ -44,6 +44,14 @@ public class Main {
     public static int nb_bonus_e = 0;
     public static int nb_bonus_f = 0;
 
+    public static String street_a= "";
+    public static String street_b= "";
+    public static String street_c= "";
+    public static String street_d= "";
+    public static String street_e= "";
+    public static String street_f= "";
+
+
     public static void read_input() throws IOException{
         BufferedReader buffer_a;
         BufferedReader buffer_b;
@@ -140,6 +148,43 @@ public class Main {
             data = row_f.split(" ");
             Main.nb_bonus_f = Integer.valueOf(data[4]);
 
+            int i = 1;
+            
+            /*while(i <= nb_streets_a){
+                street_a += buffer_a.readLine() + "\n";
+                i++;
+            }
+            i = 1;*/
+            
+            while(i <= nb_streets_b){
+                street_b += buffer_b.readLine() + "\n";
+                i++;
+            }
+            i = 1;
+            
+            /*while(i <= nb_streets_c){
+                street_c += buffer_c.readLine() + "\n";
+                i++;
+            }
+            i = 1;
+            
+            while(i <= nb_streets_d){
+                street_d += buffer_d.readLine() + "\n";
+                i++;
+            }
+            i = 1;
+            
+            while(i <= nb_streets_e){
+                street_e += buffer_e.readLine() + "\n";
+                i++;
+            }
+            i = 1;
+            
+            while(i <= nb_streets_f){
+                street_f += buffer_f.readLine() + "\n";
+                i++;
+            }*/
+
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -148,6 +193,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException{
         Main.read_input();
+        System.out.println(Main.street_b);
 
     }
     
